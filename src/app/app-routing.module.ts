@@ -4,9 +4,9 @@ import { TopicsComponent } from './components/topics/topics.component';
 
 const routes: Routes = [
   {
-    path : '',
+    path : 'topics',
     component : TopicsComponent
-  }
+  },
 ];
 
 @NgModule({
