@@ -1,22 +1,30 @@
-
-
 <div class="container">
-<form class="form-inline my-2 my-lg-0">
-  <input class="form-control mr-sm-2" type="search" placeholder="filter" aria-label="Search">
-  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-</form>
+  <form class="form-inline my-2 my-lg-0">
+    <input class="form-control mr-sm-2" type="search" placeholder="filter" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
 </div>
 
 <div class="container">
-<ul>
-  <li *ngFor='let topic of topics$'> {{topic}}
-    <div>
-    <i class="material-icons">
-          explore
-    </i>
+  <div class="list-group list-group-flush">
+   
+    <ul>
+      <div class="row">
+
+        <li class="list-group-item col-12" *ngFor='let topic of topics$'> {{topic | lowercase}}           <div class="row">
+            <a routerLink="description">
+              <i class="material-icons md-light md-active col-1">description</i>
+            </a>
+            <a routerLink="configs">
+              <i class="material-icons md-light md-inactive col-1">settings</i>
+            </a>
+            <a routerLink="acls">
+              <i class="material-icons md-light md-inactive col-1">supervised_user_circle</i>
+            </a>
+          </div>
+        </li>
+      </div>
+
+    </ul>
   </div>
-  </li>
-</ul>
 </div>
-
-
