@@ -14,4 +14,9 @@ export class DataService {
       return this.http.get(this.apiUrl);
     }
 
+  getDescription(topic) {
+    const url = this.apiUrl;
+    return this.http.get(this.apiUrl +'/'+topic+'/')
+  }
+
 }
