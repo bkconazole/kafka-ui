@@ -16,7 +16,7 @@ export class DataService {
 
   getDescription(topic) {
     const url = this.apiUrl;
-    return this.http.get(this.apiUrl +'/'+topic+'/')
+    return this.http.get(this.apiUrl +'/describe/'+topic+'/')
   }
 
 }
