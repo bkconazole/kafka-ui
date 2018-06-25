@@ -18,6 +18,7 @@ export class TopicConfigsComponent implements OnInit {
   }
 
   ngOnInit() {
+    let self=this;
     this.data.getDescription(this.configs$).subscribe(
       data => this.configs$ = data
     );
