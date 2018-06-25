@@ -14,9 +14,14 @@ export class DataService {
       return this.http.get(this.apiUrl);
     }
 
-  getDescription(topic) {
+  getDescription( topic ) {
     const url = this.apiUrl;
-    return this.http.get(this.apiUrl +'/describe/'+topic+'/')
+    return this.http.get( url +'/describe/'+topic+'/')
+  }
+
+  getAcls( topic ) {
+    const url = this.apiUrl+'/acls/';
+    return this.http.get( url + topic +'/')
   }
 
 }

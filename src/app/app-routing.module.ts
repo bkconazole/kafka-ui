@@ -15,11 +15,11 @@ const routes: Routes = [
     component : TopicDescriptionComponent
   },
   {
-    path : 'topics/configs',
+    path : 'topics/configs/:topic',
     component : TopicConfigsComponent
   },
   {
-    path : 'topics/acls',
+    path : 'topics/acls/:topic',
     component : TopicAclsComponent
   },
 ];

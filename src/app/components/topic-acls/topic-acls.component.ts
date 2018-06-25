@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../../services/data.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-topic-acls',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopicAclsComponent implements OnInit {
 
-  constructor() { }
+  acls$ : Object;
+  constructor( private data: DataService, private route: ActivatedRoute ) {
+      this.route.params.subscribe(
+        parmas => this.acls$ = parmas.topic
+      )
+    
+   }
 
   ngOnInit() {
+    this.data.getAcls(this.acls$).subscribe(
+      data => this.acls$ = data
+    )
   }
 
 }

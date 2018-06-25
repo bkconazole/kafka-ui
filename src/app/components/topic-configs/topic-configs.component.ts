@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../../services/data.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-topic-configs',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopicConfigsComponent implements OnInit {
 
-  constructor() { }
+  configs$: Object;
+
+  constructor( private data: DataService, private route: ActivatedRoute ) { 
+    this.route.params.subscribe(
+      params => this.configs$ = params.topic
+    );
+  }
 
   ngOnInit() {
+    this.data.getDescription(this.configs$).subscribe(
+      data => this.configs$ = data
+    );
   }
 
 }

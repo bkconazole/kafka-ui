@@ -23,7 +23,7 @@ export class TopicDescriptionComponent implements OnInit {
       data => this.description$ = data 
     );
 
-    $('#myModal').modal('show');
+    //$('#myModal').modal('show');
   }
 
 }
