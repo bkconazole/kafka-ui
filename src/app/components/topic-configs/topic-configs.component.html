@@ -1,6 +1,84 @@
-<p>
-  {{configs$.partitions}}
-  {{configs$.replicas}}
-  {{configs$["retention.bytes"]}}
-  {{configs$["segment.bytes"]}}
-</p>
+
+<div class="container">
+  <section>
+    <div class="col-md-4 text-center">
+      <div class="panel panel-success panel-pricing">
+        <div class="panel-heading">
+          <i class="fa fa-desktop"></i>
+          <h3>configs</h3>
+        </div>
+        <div class="panel-body text-center">
+          <p>
+            <strong>{{topic$ | lowercase}}</strong>
+          </p>
+        </div>
+        <ul class="list-group text-center">
+          <li class="list-group-item">
+            <div class="row">
+              <div class="col">
+                partitions
+              </div>
+              <div class="col">
+                {{configs$.partitions}}
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item">
+              <div class="row">
+                <div class="col">
+                    replicas
+                </div>
+                <div class="col">
+                    {{configs$.replicas}}
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item">
+                <div class="row">
+                  <div class="col">
+                    segment.bytes
+                  </div>
+                  <div class="col">
+                    {{configs$['segment.bytes']}}
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item">
+                  <div class="row">
+                    <div class="col">
+                      retention.bytes
+                    </div>
+                    <div class="col">
+                      {{configs$['retention.bytes']}}
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="row">
+                      <div class="col">
+                        retention.ms
+                      </div>
+                      <div class="col">
+                        {{configs$['retention.ms']}}
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                      <div class="row">
+                        <div class="col">
+                          cleanup.policy
+                        </div>
+                        <div class="col">
+                          {{configs$['cleanup.policy']}}
+                        </div>
+                      </div>
+                    </li>
+        </ul>
+        <div class="panel-footer">
+          <a class="btn btn-lg btn-block btn-success" href="#">topics</a>
+        </div>
+      </div>
+    </div>
+    <!-- /item -->
+  </section>
+</div>

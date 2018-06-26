@@ -9,6 +9,7 @@ import { TopicsComponent } from './components/topics/topics.component';
 import { TopicDescriptionComponent } from './components/topic-description/topic-description.component';
 import { TopicConfigsComponent } from './components/topic-configs/topic-configs.component';
 import { TopicAclsComponent } from './components/topic-acls/topic-acls.component';
+import { CreateTopicComponent } from './components/create-topic/create-topic.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { TopicAclsComponent } from './components/topic-acls/topic-acls.component
     TopicsComponent,
     TopicDescriptionComponent,
     TopicConfigsComponent,
-    TopicAclsComponent
+    TopicAclsComponent,
+    CreateTopicComponent
   ],
   imports: [
     BrowserModule,

@@ -8,18 +8,18 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./topic-configs.component.scss']
 })
 export class TopicConfigsComponent implements OnInit {
-
+  topic$: Object;
   configs$: Object;
 
   constructor( private data: DataService, private route: ActivatedRoute ) { 
     this.route.params.subscribe(
-      params => this.configs$ = params.topic
+      params => this.topic$ = params.topic
     );
   }
 
   ngOnInit() {
     let self=this;
-    this.data.getDescription(this.configs$).subscribe(
+    this.data.getDescription(this.topic$).subscribe(
       data => this.configs$ = data
     );
   }
