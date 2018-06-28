@@ -5,7 +5,7 @@ import { TopicAclsComponent } from './components/topic-acls/topic-acls.component
 import { TopicConfigsComponent } from './components/topic-configs/topic-configs.component';
 import { TopicDescriptionComponent } from './components/topic-description/topic-description.component';
 import { CreateTopicComponent } from './components/create-topic/create-topic.component';
-
+import { CreateTopicFormComponent } from './components/create-topic-form/create-topic-form.component';
 const routes: Routes = [
   {
     path : 'topics',
@@ -27,6 +27,10 @@ const routes: Routes = [
     path : 'topics/acls/:topic',
     component : TopicAclsComponent
   },
+  {
+    path : 'forms',
+    component: CreateTopicFormComponent 
+  }
 ];
 
 @NgModule({

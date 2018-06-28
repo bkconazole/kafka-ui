@@ -39,6 +39,8 @@ testem.log
 Thumbs.db
 .DS_STORE
 
+#bash-script
+prepare-commit-msg
 /dist/
 bazel-*
 e2e_test.*

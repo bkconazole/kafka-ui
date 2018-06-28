@@ -10,6 +10,9 @@ import { TopicDescriptionComponent } from './components/topic-description/topic-
 import { TopicConfigsComponent } from './components/topic-configs/topic-configs.component';
 import { TopicAclsComponent } from './components/topic-acls/topic-acls.component';
 import { CreateTopicComponent } from './components/create-topic/create-topic.component';
+import { ReactiveFormsModule, FormGroup, FormBuilder, FormsModule, Validators } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { CreateTopicFormComponent } from './components/create-topic-form/create-topic-form.component';
 
 
 @NgModule({
@@ -20,12 +23,18 @@ import { CreateTopicComponent } from './components/create-topic/create-topic.com
     TopicDescriptionComponent,
     TopicConfigsComponent,
     TopicAclsComponent,
-    CreateTopicComponent
+    CreateTopicComponent,
+    CreateTopicFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    CommonModule,
+    FormsModule,
+    BrowserModule,
+    ReactiveFormsModule
+ 
   ],
   providers: [],
   bootstrap: [AppComponent]
