@@ -13,6 +13,8 @@ import { CreateTopicComponent } from './components/create-topic/create-topic.com
 import { ReactiveFormsModule, FormGroup, FormBuilder, FormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { CreateTopicFormComponent } from './components/create-topic-form/create-topic-form.component';
+import { FileSelectDirective, FileDropDirective } from 'ng2-file-upload';
+import { FileUploadComponent } from './components/file-upload/file-upload.component';
 
 
 @NgModule({
@@ -24,7 +26,9 @@ import { CreateTopicFormComponent } from './components/create-topic-form/create-
     TopicConfigsComponent,
     TopicAclsComponent,
     CreateTopicComponent,
-    CreateTopicFormComponent
+    CreateTopicFormComponent,
+    FileSelectDirective,
+    FileUploadComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +38,6 @@ import { CreateTopicFormComponent } from './components/create-topic-form/create-
     FormsModule,
     BrowserModule,
     ReactiveFormsModule
- 
   ],
   providers: [],
   bootstrap: [AppComponent]

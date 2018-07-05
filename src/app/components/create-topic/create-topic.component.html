@@ -22,10 +22,10 @@
                   folder
                 </i>
                 <span class="image-preview-input-title"></span>
-                <input type="file" accept=".json, .txt" name="input-file-preview" />
+                <input type="file" accept=".json, .txt" name="input-file-preview" (change)="fileUpload($event)"/>
                 <!-- rename it -->
               </div>
-              <button type="button" class="btn btn-labeled btn-primary">
+              <button (click)="createTopic()" class="btn btn-labeled btn-primary" >
                 <span class="btn-label">
                   <i class="material-icons">
                     cloud_upload
@@ -39,7 +39,8 @@
           <br />
 
           <!-- Drop Zone -->
-          <div class="upload-drop-zone" id="drop-zone"> Or drag and drop files here </div>
+          <div class="upload-drop-zone" id="drop-zone"> Or drag and drop files here 
+          </div>
           <br />
           <!-- Progress Bar -->
           <div class="progress">
@@ -47,7 +48,7 @@
               <span class="sr-only">60% Complete</span>
             </div>
           </div>
-          <br />
+          <br/>
 
         </div>
       </div>

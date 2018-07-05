@@ -6,6 +6,7 @@ import { TopicConfigsComponent } from './components/topic-configs/topic-configs.
 import { TopicDescriptionComponent } from './components/topic-description/topic-description.component';
 import { CreateTopicComponent } from './components/create-topic/create-topic.component';
 import { CreateTopicFormComponent } from './components/create-topic-form/create-topic-form.component';
+import { FileUploadComponent } from './components/file-upload/file-upload.component';
 const routes: Routes = [
   {
     path : 'topics',
@@ -14,6 +15,10 @@ const routes: Routes = [
   {
     path: 'create',
     component: CreateTopicComponent
+  },
+  {
+    path: 'file',
+    component: FileUploadComponent
   },
   {
     path : 'topics/description/:topic',
@@ -30,7 +35,7 @@ const routes: Routes = [
   {
     path : 'forms',
     component: CreateTopicFormComponent 
-  }
+  },
 ];
 
 @NgModule({
