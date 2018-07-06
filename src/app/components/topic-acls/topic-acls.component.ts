@@ -8,20 +8,20 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./topic-acls.component.scss']
 })
 export class TopicAclsComponent implements OnInit {
-
+  topic$: Object;
   acls$ : Object;
   constructor( private data: DataService, private route: ActivatedRoute ) {
       this.route.params.subscribe(
-        parmas => this.acls$ = parmas.topic
+        parmas => this.topic$ = parmas.topic
       )
     
    }
 
   ngOnInit() {
-    this.data.getAcls(this.acls$).subscribe(
+    this.data.getAcls(this.topic$).subscribe(
       data => this.acls$ = data
     )
-    console.log(this.acls$);
+    console.log(this.topic$)
   }
 
 }

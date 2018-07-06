@@ -1,3 +1,20 @@
-<p>
+
+<div class="container">
+    <div class="list-group list-group-flush">
+     
+      <ul>
+        <div class="row">
+            topic: {{topic$}}
+            number of acls: {{acls$.length}}
+          <li class="list-group-item col-12" *ngFor='let acl of acls$'>  
+                
+             <div class="row">
+                principal: {{acl.principal}}
+                permission: {{acl.permission}}
+                operation: {{acl.operation}}
+                hosts: {{acl.hosts}}
+            </div>
+          </li>
+        </div>
   
-</p>
+      </ul>

@@ -11,6 +11,7 @@ import { Observable } from 'rxjs';
 export class TopicsComponent implements OnInit {
 
   topics$: Object;
+  public hide: boolean;
   constructor( private data: DataService ) { }
 
   ngOnInit() {
@@ -18,5 +19,9 @@ export class TopicsComponent implements OnInit {
       data => this.topics$ = data
     )
   }
-
+  getHide() {
+    console.log("get hide is called ... ")
+    //this.hide = true;
+    return this.hide = false;
+  }
 }
