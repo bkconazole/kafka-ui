@@ -11,8 +11,10 @@
     <ul>
       <div class="row">
 
-        <li class="list-group-item col-12" *ngFor='let topic of topics$'> {{topic | lowercase}}          
-           <div class="row" [hidden]="getHide()">
+        <li class="list-group-item col-12"  *ngFor='let topic of topics$'> {{topic | lowercase}} 
+          <ul> 
+            <li (click)="toggleHide()">     
+           <div class="row" [hidden]="getHide()" >
             <a routerLink="description/{{topic}}">
               <i class="material-icons md-light md-active col-1">description</i>
             </a>
@@ -23,6 +25,8 @@
               <i class="material-icons md-light md-inactive col-1">supervised_user_circle</i>
             </a>
           </div>
+        </li> 
+        </ul> 
         </li>
       </div>
 

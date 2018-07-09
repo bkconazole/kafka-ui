@@ -15,6 +15,7 @@ import { CommonModule } from '@angular/common';
 import { CreateTopicFormComponent } from './components/create-topic-form/create-topic-form.component';
 import { FileSelectDirective, FileDropDirective } from 'ng2-file-upload';
 import { FileUploadComponent } from './components/file-upload/file-upload.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { FileUploadComponent } from './components/file-upload/file-upload.compon
     CreateTopicComponent,
     CreateTopicFormComponent,
     FileSelectDirective,
-    FileUploadComponent
+    FileUploadComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
