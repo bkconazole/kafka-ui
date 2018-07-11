@@ -25,7 +25,7 @@
                 <div class="form-group">
                   <input id="login-password" type="password" name="loginPassword" required data-msg="please enter your password" class="input-material">
                   <label for="login-password" class="label-material">password</label>
-                </div><a id="login" href="index.html" class="btn btn-primary">login</a>
+                </div><a id="login" (click)="onLoginClick()" class="btn btn-primary">login</a>
                 <!-- This should be submit button but I replaced it with <a> for demo purposes-->
               </form><a href="#" class="forgot-pass">forgot password?</a><br><small>do not have an account? </small><a href="register.html" class="signup">signup</a>
             </div>
@@ -39,3 +39,4 @@
     </p>
   </div>
 </div>
+

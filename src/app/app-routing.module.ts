@@ -7,7 +7,13 @@ import { TopicDescriptionComponent } from './components/topic-description/topic-
 import { CreateTopicComponent } from './components/create-topic/create-topic.component';
 import { CreateTopicFormComponent } from './components/create-topic-form/create-topic-form.component';
 import { FileUploadComponent } from './components/file-upload/file-upload.component';
+import { LoginComponent } from './components/login/login.component';
+import { LandingComponent } from './components/landing/landing.component';
 const routes: Routes = [
+  {
+    path :'',
+    component: TopicsComponent
+  },
   {
     path : 'topics',
     component : TopicsComponent
