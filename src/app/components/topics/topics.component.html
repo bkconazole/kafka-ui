@@ -1,35 +1,80 @@
-<div class="container">
-  <form class="form-inline my-2 my-lg-0">
-    <input class="form-control mr-sm-2" type="search" placeholder="filter" aria-label="Search">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-  </form>
-</div>
 
-<div class="container">
-  <div class="list-group list-group-flush">
-   
-    <ul>
-      <div class="row">
-
-        <li class="list-group-item col-12"  *ngFor='let topic of topics$'> {{topic | lowercase}} 
-          <ul> 
-            <li (click)="toggleHide()">     
-           <div class="row" [hidden]="getHide()" >
-            <a routerLink="description/{{topic}}">
-              <i class="material-icons md-light md-active col-1">description</i>
-            </a>
-            <a routerLink="configs/{{topic}}">
-              <i class="material-icons md-light md-inactive col-1">settings</i>
-            </a>
-            <a routerLink="acls/{{topic}}">
-              <i class="material-icons md-light md-inactive col-1">supervised_user_circle</i>
-            </a>
-          </div>
-        </li> 
-        </ul> 
-        </li>
+    <header class="page-header">
+      <div class="container-fluid">
+        <h2 class="no-margin-bottom">Topics</h2>
       </div>
+    </header>
 
-    </ul>
+<section class="dashboard-header">
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Statistics -->
+      <div class="statistics col-lg-3 col-12">
+        <div class="statistic d-flex align-items-center bg-white has-shadow">
+          <div class="icon bg-red"><i class="fa fa-tasks"></i></div>
+          <div class="text"><strong>{{topics$.length}}</strong><br><small>Topics</small></div>
+        </div>
+        <div class="statistic d-flex align-items-center bg-white has-shadow">
+          <div class="icon bg-green"><i class="fa fa-calendar-o"></i></div>
+          <div class="text"><strong>00</strong><br><small>Acls</small></div>
+        </div>
+        <div class="statistic d-flex align-items-center bg-white has-shadow">
+          <div class="icon bg-orange"><i class="fa fa-paper-plane-o"></i></div>
+          <div class="text"><strong>00</strong><br><small>Configs</small></div>
+        </div>
+      </div>
+  
+  
+      <div class="chart col-lg-6 col-12">
+        <div class="bg-white d-flex align-items-center justify-content-center has-shadow">
+           <!-- Page Header-->
+           
+
+          <div class="container">
+          <!--insert topic lists here-->
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="filter" aria-label="Search">
+            <button class="btn btn-primary" type="submit">Search</button>
+          </form>
+        
+          <!--lit of topics -->
+          <ul>
+            <div class="row">
+      
+              <li class="list-group-item col-12"  *ngFor='let topic of topics$'> {{topic | lowercase}} 
+                <ul> 
+                  <li (click)="toggleHide()">     
+                 <div class="row" [hidden]="getHide()" >
+                  <a routerLink="description/{{topic}}">
+                    <i class="material-icons md-light md-active col-1">description</i>
+                  </a>
+                  <a routerLink="configs/{{topic}}">
+                    <i class="material-icons md-light md-inactive col-1">settings</i>
+                  </a>
+                  <a routerLink="acls/{{topic}}">
+                    <i class="material-icons md-light md-inactive col-1">supervised_user_circle</i>
+                  </a>
+                </div>
+              </li> 
+              </ul> 
+              </li>
+            </div>
+      
+          </ul>
+            </div>
+          <!--end of list of topics-->
+        </div>
+      </div>
+      <div class="chart col-lg-3 col-12">
+        <!-- Bar Chart   -->
+       
+        <!-- Numbers-->
+        <div class="statistic d-flex align-items-center bg-white has-shadow">
+          <div class="icon bg-green"><i class="fa fa-line-chart"></i></div>
+          <div class="text"><strong>99.9%</strong><br><small>Success Rate</small></div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+</section>
+
