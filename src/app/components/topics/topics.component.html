@@ -33,15 +33,15 @@
           <div class="container">
           <!--insert topic lists here-->
           <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="filter" aria-label="Search">
-            <button class="btn btn-primary" type="submit">Search</button>
+            <input class="form-control mr-sm-2" type="text" placeholder="filter" aria-label="Search" [(ngModel)]="term" name="ngname"/>
+            
           </form>
         
           <!--lit of topics -->
           <ul>
             <div class="row">
       
-              <li class="list-group-item col-12"  *ngFor='let topic of topics$'> {{topic | lowercase}} 
+              <li class="list-group-item col-12"  *ngFor='let topic of topics$ | filter:term'> {{topic }} 
                 <ul> 
                   <li (click)="toggleHide()">     
                  <div class="row" [hidden]="getHide()" >
@@ -63,15 +63,6 @@
           </ul>
             </div>
           <!--end of list of topics-->
-        </div>
-      </div>
-      <div class="chart col-lg-3 col-12">
-        <!-- Bar Chart   -->
-       
-        <!-- Numbers-->
-        <div class="statistic d-flex align-items-center bg-white has-shadow">
-          <div class="icon bg-green"><i class="fa fa-line-chart"></i></div>
-          <div class="text"><strong>99.9%</strong><br><small>Success Rate</small></div>
         </div>
       </div>
     </div>

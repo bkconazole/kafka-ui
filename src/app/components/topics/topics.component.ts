@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../services/data.service';
+import { FilterPipe } from '../../filter.pipe';
 import { Observable } from 'rxjs';
 
 
@@ -20,7 +21,7 @@ export class TopicsComponent implements OnInit {
     )
   }
   getHide() {
-    console.log("get hide is called ... ");
+    //console.log("get hide is called ... ");
     return this.hide;
   }
 

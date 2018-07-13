@@ -17,6 +17,7 @@ import { FileSelectDirective, FileDropDirective } from 'ng2-file-upload';
 import { FileUploadComponent } from './components/file-upload/file-upload.component';
 import { LoginComponent } from './components/login/login.component';
 import { LandingComponent } from './components/landing/landing.component';
+import { FilterPipe } from './filter.pipe';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { LandingComponent } from './components/landing/landing.component';
     FileSelectDirective,
     FileUploadComponent,
     LoginComponent,
-    LandingComponent
+    LandingComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
