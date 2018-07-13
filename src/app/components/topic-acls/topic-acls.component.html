@@ -65,7 +65,7 @@
                         </thead>
                         <tbody *ngFor='let acl of acls$'>
                           <tr>
-                            <th scope="row"> {{acl.principal}}</th>
+                            <td> {{acl.principal}}</td>
                             <td>{{acl.permission}}</td>
                             <td>{{acl.operation}}</td>
                             <td>{{acl.hosts}}</td>
@@ -74,9 +74,6 @@
                       </table>
                     </div>
                   </div>
-                
-                
-
               </div>
               <!--end of container for the list of acls-->
             </div>

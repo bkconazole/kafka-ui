@@ -32,16 +32,22 @@
 
           <div class="container">
           <!--insert topic lists here-->
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="filter" aria-label="Search" [(ngModel)]="term" name="ngname"/>
-            
-          </form>
         
-          <!--lit of topics -->
+
+          <div class="content">
+          <form method="post" class="form-validate" autocomplete="off">
+              <div class="form-group">
+                <input id="login-username" type="text" name="loginUsername" [(ngModel)]="term" class="input-material">
+                <label for="login-username" class="label-material">filter</label>
+              </div>
+              </form>
+            </div>
+     
+          <!--
           <ul>
             <div class="row">
       
-              <li class="list-group-item col-12"  *ngFor='let topic of topics$ | filter:term'> {{topic }} 
+              <li class="list-group-item col-10 align-items-center"  *ngFor='let topic of topics$ | filter:term'> {{topic }} 
                 <ul> 
                   <li (click)="toggleHide()">     
                  <div class="row" [hidden]="getHide()" >
@@ -59,9 +65,40 @@
               </ul> 
               </li>
             </div>
-      
           </ul>
+          -->
+
+          <div class="card-body">
+            <div class="table-responsive">                       
+              <table class="table table-hover">
+               
+                <tbody *ngFor='let topic of topics$ | filter:term'>
+                  <tr>
+                    <td> {{topic}}</td>
+                    <td>
+                        <div class="row" [hidden]="getHide()" >
+                            <a routerLink="description/{{topic}}">
+                              <i class="material-icons md-light md-active col-1">description</i>
+                            </a>
+                            <a routerLink="configs/{{topic}}">
+                              <i class="material-icons md-light md-inactive col-1">settings</i>
+                            </a>
+                            <a routerLink="acls/{{topic}}">
+                              <i class="material-icons md-light md-inactive col-1">supervised_user_circle</i>
+                            </a>
+                          </div>
+                  </td>
+                  
+                  </tr>
+                </tbody>
+              </table>
             </div>
+          </div>
+
+          
+          
+            </div>
+
           <!--end of list of topics-->
         </div>
       </div>
