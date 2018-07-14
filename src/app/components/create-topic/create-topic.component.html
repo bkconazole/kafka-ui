@@ -33,11 +33,15 @@
 
                       <div class="form-group row">
                           <div class="col-sm-9">
-                            <input id="fileInput" type="file" class="form-control-file">
+                            <input id="fileInput" type="file" accept =".json, .txt" class="form-control-file" (change)="fileUpload($event)">
                           </div>
                         </div>
 
-                        
+                        <div class="btn btn-default image-preview-input">      
+                          <input id="fileInput" type="file" accept=".json, .txt" name="input-file-preview" (change)="fileUpload($event)"/>
+                          <!-- rename it -->    
+                        </div>
+
                       <div class="panel-body">
                         <div class="input-group image-preview">
                           <input placeholder="" type="text" class="form-control image-preview-filename" disabled="disabled">
@@ -47,16 +51,8 @@
                             <button type="button" class="btn btn-default image-preview-clear" style="display:none;">
                               <span class="glyphicon glyphicon-remove"></span> Clear </button>
 
-                              
                             <!-- image-preview-input -->
-                            <div class="btn btn-default image-preview-input">
-                              <i class="material-icons">
-                                folder
-                              </i>
-                              <span class="image-preview-input-title"></span>
-                              <input id="fileInput" type="file" accept=".json, .txt" name="input-file-preview" (change)="fileUpload($event)"/>
-                              <!-- rename it -->
-                            </div>
+                           
                             <button (click)="createTopic()" class="btn btn-labeled btn-primary" >
                               <span class="btn-label">
                                 <i class="material-icons">
