@@ -17,17 +17,22 @@ export class CreateTopicComponent implements OnInit {
   }
   ngOnInit() {
   }
+
   createTopic() {
     console.log("create topic is called");
     this.dataService.createTopic(this.fileText).subscribe(
       res => {
+        console.log("http response starts here...");
         console.log(res);
+        console.log("http response ends here...");
       },
       ( err: HttpErrorResponse ) => {
+        console.log("error message starts here....");
         console.log(err.error);
         console.log(err.name);
         console.log(err.message);
         console.log(err.status);
+        console.log("error message ends here....");
       }
     );
   }

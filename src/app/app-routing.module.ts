@@ -9,6 +9,8 @@ import { CreateTopicFormComponent } from './components/create-topic-form/create-
 import { FileUploadComponent } from './components/file-upload/file-upload.component';
 import { LoginComponent } from './components/login/login.component';
 import { LandingComponent } from './components/landing/landing.component';
+import { UpdateTopicComponent } from './components/update-topic/update-topic.component';
+import { DeleteTopicComponent } from './components/delete-topic/delete-topic.component';
 const routes: Routes = [
   {
     path :'',
@@ -19,12 +21,20 @@ const routes: Routes = [
     component : TopicsComponent
   },
   {
-    path: 'create',
+    path: 'topic/create',
     component: CreateTopicComponent
   },
   {
     path: 'file',
     component: FileUploadComponent
+  },
+  {
+    path: 'topic/update',
+    component: UpdateTopicComponent
+  },
+  {
+    path: 'topic/delete',
+    component: DeleteTopicComponent
   },
   {
     path : 'topics/description/:topic',

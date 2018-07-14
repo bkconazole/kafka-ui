@@ -36,4 +36,14 @@ export class DataService {
     return this.http.post( url, fileText, httpOptions);
   }
 
+  updateTopic( fileText ) {
+    const url = this.apiUrl + '/update';
+    return this.http.put( url, fileText, httpOptions );
+  }
+
+  deleteTopic( fileText ) {
+    const url = this.apiUrl
+    return this.http.delete( url, httpOptions);
+  }
+
 }

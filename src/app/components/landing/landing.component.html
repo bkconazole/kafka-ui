@@ -91,29 +91,37 @@
           </div>
           <!-- Sidebar Navidation Menus--><span class="heading">Main</span>
           <ul class="list-unstyled">
-                    <li class="active"><a href="index.html"> <i class="icon-home"></i>Home </a></li>
-                    <li><a routerLink="topics"> <i class="material-icons">
-                      home</i>Home </a></li>
+                  
+          
                     <li><a routerLink="topics"> <i class="material-icons">
                       list
                       </i>Topics </a></li>
-                    
-                    <li><a href="charts.html"> <i class="fa fa-bar-chart"></i>Charts </a></li>
-                    <li><a href="charts.html"> <i class="fa fa-bar-chart"></i>Charts </a></li>
-                    <li><a href="forms.html"> <i class="icon-padnote"></i>Forms </a></li>
-                    <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="material-icons">
+                    <li><a href="#manageTopicsDropDown" aria-expanded="false" data-toggle="collapse"> <i class="material-icons">
                         build
                         </i>Manage Topics </a>
-                      <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
-                        <li><a routerLink="create"><i class="material-icons">
+                      <ul id="manageTopicsDropDown" class="collapse list-unstyled ">
+                        <li><a routerLink="topic/create"><i class="material-icons">
                             create
                             </i>Create</a></li>
-                        <li><a href="#">Update</a></li>
-                        <li><a href="#"><i class="material-icons">
+                        <li><a routerLink="topic/update">Update</a></li>
+                        <li><a routerLink="topic/delete"><i class="material-icons">
                             delete
                             </i>Delete</a></li>
                       </ul>
                     </li>
+
+                    <li><a href="#manageAclsDropdown" aria-expanded="false" data-toggle="collapse"> <i class="material-icons">
+                      build
+                      </i>Manage ACLs </a>
+                    <ul id="manageAclsDropdown" class="collapse list-unstyled ">
+                      <li><a routerLink="topic/create"><i class="material-icons">
+                          create
+                          </i>Grant</a></li>
+                      <li><a routerLink="topic/delete"><i class="material-icons">
+                          delete
+                          </i>Revoke</a></li>
+                    </ul>
+                  </li>
                     <li><a href="login.html"> <i class="icon-interface-windows"></i>Login page </a></li>
           </ul><span class="heading">Extras</span>
           <ul class="list-unstyled">
