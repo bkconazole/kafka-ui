@@ -18,6 +18,8 @@ import { FileUploadComponent } from './components/file-upload/file-upload.compon
 import { LoginComponent } from './components/login/login.component';
 import { LandingComponent } from './components/landing/landing.component';
 import { FilterPipe } from './filter.pipe';
+import { UpdateTopicComponent } from './components/update-topic/update-topic.component';
+import { DeleteTopicComponent } from './components/delete-topic/delete-topic.component';
 
 
 @NgModule({
@@ -34,7 +36,9 @@ import { FilterPipe } from './filter.pipe';
     FileUploadComponent,
     LoginComponent,
     LandingComponent,
-    FilterPipe
+    FilterPipe,
+    UpdateTopicComponent,
+    DeleteTopicComponent
   ],
   imports: [
     BrowserModule,
