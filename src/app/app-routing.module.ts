@@ -11,11 +11,15 @@ import { LoginComponent } from './components/login/login.component';
 import { LandingComponent } from './components/landing/landing.component';
 import { UpdateTopicComponent } from './components/update-topic/update-topic.component';
 import { DeleteTopicComponent } from './components/delete-topic/delete-topic.component';
+import { GrantAclsComponent } from './components/grant-acls/grant-acls.component';
+import { RevokeAclsComponent } from './components/revoke-acls/revoke-acls.component';
+
 const routes: Routes = [
   {
     path :'',
     component: TopicsComponent
   },
+  
   {
     path : 'topics',
     component : TopicsComponent
@@ -52,6 +56,18 @@ const routes: Routes = [
     path : 'forms',
     component: CreateTopicFormComponent 
   },
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'acls/grant',
+    component: GrantAclsComponent
+  },
+  {
+    path: 'acls/revoke',
+    component: RevokeAclsComponent
+  }
 ];
 
 @NgModule({

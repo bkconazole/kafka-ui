@@ -1,3 +1,94 @@
-<p>
-  revoke-acls works!
-</p>
+
+
+    <header class="page-header">
+      <div class="container-fluid">
+        <h2 class="no-margin-bottom">revoke acls</h2>
+      </div>
+    </header>
+
+<section class="dashboard-header">
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Statistics -->
+      <div class="statistics col-lg-3 col-12">  
+      </div>
+  
+      <div class="chart col-lg-6 col-12">
+        <div class="bg-white d-flex align-items-center justify-content-center has-shadow">
+          
+          <!-- Page Header-->
+           <div class="container">
+              <br />
+              <div class="row">
+            
+                <div class="col-md-12">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <small> </small>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-sm-9">
+                          <input id="fileInput" type="file" accept =".json, .txt" class="form-control-file" (change)="fileUpload($event)">
+                        </div>
+                      </div>
+
+                  
+
+                    <div class="panel-body">
+                      <div class="input-group image-preview">
+                        <input placeholder="" type="text" class="form-control image-preview-filename" disabled="disabled">
+                        <!-- don't give a name === doesn't send on POST/GET -->
+                        <span class="input-group-btn">
+                          <!-- image-preview-clear button -->
+                          <button type="button" class="btn btn-default image-preview-clear" style="display:none;">
+                            <span class="glyphicon glyphicon-remove"></span> Clear </button>
+
+                          <!-- image-preview-input -->
+                         
+                          <button (click)="revokeAcls()" class="btn btn-labeled btn-primary" >
+                            <span class="btn-label">
+                              <i class="material-icons">
+                                cloud_upload
+                              </i>
+                            </span>
+                          </button>
+                        </span>
+                      </div>
+                      <!-- /input-group image-preview [TO HERE]-->
+            
+                      <br />
+            
+                      <!-- Drop Zone -->
+                      <div class="upload-drop-zone" id="drop-zone"> or drag and drop a file here 
+                      </div>
+                    
+            
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <!--end of list of topics-->
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

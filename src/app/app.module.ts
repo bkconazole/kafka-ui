@@ -20,6 +20,10 @@ import { LandingComponent } from './components/landing/landing.component';
 import { FilterPipe } from './filter.pipe';
 import { UpdateTopicComponent } from './components/update-topic/update-topic.component';
 import { DeleteTopicComponent } from './components/delete-topic/delete-topic.component';
+import { GrantAclsComponent } from './components/grant-acls/grant-acls.component';
+import { RevokeAclsComponent } from './components/revoke-acls/revoke-acls.component';
+import { KeyValuesPipe } from './key-values.pipe';
+
 
 
 @NgModule({
@@ -38,7 +42,10 @@ import { DeleteTopicComponent } from './components/delete-topic/delete-topic.com
     LandingComponent,
     FilterPipe,
     UpdateTopicComponent,
-    DeleteTopicComponent
+    DeleteTopicComponent,
+    GrantAclsComponent,
+    RevokeAclsComponent,
+    KeyValuesPipe
   ],
   imports: [
     BrowserModule,

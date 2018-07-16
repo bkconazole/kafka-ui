@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../services/data.service';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
+import { KeyValuesPipe } from '../../key-values.pipe';
 
 declare var $: any;
 
@@ -12,18 +13,25 @@ declare var $: any;
   styleUrls: ['./topic-description.component.scss']
 })
 export class TopicDescriptionComponent implements OnInit {
+  topic$: Object;
   description$: Object;
   
   constructor( private data : DataService, private route: ActivatedRoute) {
-    this.route.params.subscribe( params => this.description$ = params.topic )
+    this.route.params.subscribe( params => this.topic$ = params.topic )
    }
 
   ngOnInit() {
-    this.data.getDescription(this.description$).subscribe(
+    this.data. getParitionInfo(this.topic$).subscribe(
       data => this.description$ = data 
     );
-
-    $('#myModal').modal('show');
   }
+    
+    print() {
+    for(var prop in this.description$) {
+      console.log( prop + this.description$[prop]);
+    }
+   console.log(this.description$);
+  }
+  
 
 }

@@ -16,7 +16,7 @@
           <!-- Navbar Header-->
           <div class="navbar-header">
             <!-- Navbar Brand -->
-            <a href="index.html" class="navbar-brand d-none d-sm-inline-block">
+            <a routerLink="" class="navbar-brand d-none d-sm-inline-block">
               <div class="brand-text d-none d-lg-inline-block">
                 <span>kafka </span>
                 <strong>topics</strong>
@@ -174,15 +174,14 @@
         </div>
       </div>
       <!-- Sidebar Navidation Menus-->
-      <span class="heading">Main</span>
       <ul class="list-unstyled">
 
 
         <li>
           <a routerLink="topics">
             <i class="material-icons">
-              list
-            </i>Topics </a>
+              home
+              </i>Home </a>
         </li>
         <li>
           <a href="#manageTopicsDropDown" aria-expanded="false" data-toggle="collapse">
@@ -193,11 +192,16 @@
             <li>
               <a routerLink="topic/create">
                 <i class="material-icons">
-                  create
-                </i>Create</a>
+                  add_box
+                  </i>
+                Create</a>
             </li>
             <li>
-              <a routerLink="topic/update">Update</a>
+              <a routerLink="topic/update">
+                <i class="material-icons">
+                  create
+                </i>
+                Update</a>
             </li>
             <li>
               <a routerLink="topic/delete">
@@ -215,13 +219,13 @@
             </i>Manage ACLs </a>
           <ul id="manageAclsDropdown" class="collapse list-unstyled ">
             <li>
-              <a routerLink="topic/create">
+              <a routerLink="acls/grant">
                 <i class="material-icons">
                   create
                 </i>Grant</a>
             </li>
             <li>
-              <a routerLink="topic/delete">
+              <a routerLink="acls/revoke">
                 <i class="material-icons">
                   delete
                 </i>Revoke</a>
@@ -229,7 +233,7 @@
           </ul>
         </li>
         <li>
-          <a href="login.html">
+          <a routerLink="login">
             <i class="icon-interface-windows"></i>Login page </a>
         </li>
       </ul>
@@ -245,15 +249,7 @@
 
       <!--router outlet-->
       <router-outlet></router-outlet>
-      <!-- Dashboard Header Section    -->
-
-      <!-- Projects Section-->
-      <!-- Client Section-->
-
-      <!-- Feeds Section-->
-
-      <!-- Updates Section                                                -->
-
+    
       <!-- Page Footer-->
       <footer class="main-footer">
         <div class="container-fluid">
@@ -273,4 +269,3 @@
     </div>
   </div>
 </div>
-<!-- JavaScript files-->

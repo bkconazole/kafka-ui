@@ -1,6 +1,24 @@
 
+<div class="container">
 
+ 
+    
+    <table class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th>Principal</th>
+          
+          </tr>
+        </thead>
+        <tbody *ngFor='let x of description$ | keyValues'>
+          <tr>
+            
+            <td>{{x}}</td>
+          </tr>
+        </tbody>
+      </table>
+    
+</div>
 
-        <p>partition: {{description$.partitions}}
-          leader: {{description$.replicas}}</p>
+       
       

@@ -21,7 +21,7 @@ export class TopicAclsComponent implements OnInit {
     this.data.getAcls(this.topic$).subscribe(
       data => this.acls$ = data
     )
-    console.log(this.topic$)
+  console.log(this.topic$)
   }
 
 }

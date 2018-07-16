@@ -25,6 +25,10 @@ export class DataService {
     return this.http.get( url +'/describe/'+topic+'/')
   }
 
+  getParitionInfo(topic) {
+    const url = this.apiUrl;
+    return this.http.get(url +'/partition/'+ topic +'/');
+  }
   getAcls( topic ) {
     const url = this.apiUrl+'/acls/';
     return this.http.get( url + topic +'/')
@@ -44,6 +48,16 @@ export class DataService {
   deleteTopic( fileText ) {
     const url = this.apiUrl
     return this.http.delete( url, httpOptions);
+  }
+
+  grantAcls (fileText) {
+    const url = this.apiUrl + '/grant';
+    return this.http.put(url, fileText, httpOptions )
+  }
+
+  revokeAcls (fileText) {
+    const url = this.apiUrl +'/revoke';
+    return this.http.put(url, fileText, httpOptions);
   }
 
 }
