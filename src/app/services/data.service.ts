@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { map } from 'rxjs/operators';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -31,7 +32,7 @@ export class DataService {
   }
   getAcls( topic ) {
     const url = this.apiUrl+'/acls/';
-    return this.http.get( url + topic +'/')
+    return this.http.get( url + topic +'/');
   }
 
   createTopic( fileText ) {

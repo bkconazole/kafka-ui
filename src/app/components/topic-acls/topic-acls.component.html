@@ -3,7 +3,7 @@
 
     <header class="page-header">
       <div class="container-fluid">
-        <h2 class="no-margin-bottom">ACLs</h2> <h3>/{{topic$}}</h3>
+        <h2 class="no-margin-bottom">ACLs</h2>
       </div>
     </header>
 
@@ -12,6 +12,11 @@
         <div class="row">
           <!-- Statistics -->
           <div class="statistics col-lg-3 col-12">
+              <div class="statistic d-flex align-items-center bg-white has-shadow">
+                  <div class="text">
+                    {{topic$}}
+                  </div>
+                </div>
             <div class="statistic d-flex align-items-center bg-white has-shadow">
               <div class="icon bg-red">
                 <i class="fa fa-tasks"></i>
@@ -20,26 +25,6 @@
                 <strong>{{acls$.length}}</strong>
                 <br>
                 <small>ACLs</small>
-              </div>
-            </div>
-            <div class="statistic d-flex align-items-center bg-white has-shadow">
-              <div class="icon bg-green">
-                <i class="fa fa-calendar-o"></i>
-              </div>
-              <div class="text">
-                <strong>00</strong>
-                <br>
-                <small>Acls</small>
-              </div>
-            </div>
-            <div class="statistic d-flex align-items-center bg-white has-shadow">
-              <div class="icon bg-orange">
-                <i class="fa fa-paper-plane-o"></i>
-              </div>
-              <div class="text">
-                <strong>00</strong>
-                <br>
-                <small>Configs</small>
               </div>
             </div>
           </div>
@@ -57,18 +42,16 @@
                       <table class="table table-striped table-hover">
                         <thead>
                           <tr>
-                            <th>Principal</th>
-                            <th>Permission</th>
-                            <th>Operation</th>
-                            <th>Hosts</th>
+                            <th>principal</th>
+                            <th>permission</th>
+                            <th>operation</th>
                           </tr>
                         </thead>
                         <tbody *ngFor='let acl of acls$'>
                           <tr>
-                            <td> {{acl.principal}}</td>
+                            <td>{{acl.principal}}</td>
                             <td>{{acl.permission}}</td>
                             <td>{{acl.operation}}</td>
-                            <td>{{acl.hosts}}</td>
                           </tr>
                         </tbody>
                       </table>

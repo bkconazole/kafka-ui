@@ -1,84 +1,85 @@
 
-<div class="container">
-  <section>
-    <div class="col-md-4 text-center">
-      <div class="panel panel-success panel-pricing">
-        <div class="panel-heading">
-          <i class="fa fa-desktop"></i>
-          <h3>configs</h3>
-        </div>
-        <div class="panel-body text-center">
-          <p>
-            <strong>{{topic$ | lowercase}}</strong>
-          </p>
-        </div>
-        <ul class="list-group text-center">
-          <li class="list-group-item">
-            <div class="row">
-              <div class="col">
-                partitions
-              </div>
-              <div class="col">
-                {{configs$.partitions}}
+
+<header class="page-header">
+  <div class="container-fluid">
+    <h2 class="no-margin-bottom">configs</h2> <h3></h3>
+  </div>
+</header>
+
+<section class="dashboard-header">
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Statistics -->
+      <div class="statistics col-lg-3 col-12">
+          <div class="statistic d-flex align-items-center bg-white has-shadow">
+              <div class="text">
+                {{topic$}}
               </div>
             </div>
-          </li>
-          <li class="list-group-item">
-              <div class="row">
-                <div class="col">
-                    replicas
-                </div>
-                <div class="col">
-                    {{configs$.replicas}}
-                </div>
-              </div>
-            </li>
-            <li class="list-group-item">
-                <div class="row">
-                  <div class="col">
-                    segment.bytes
-                  </div>
-                  <div class="col">
-                    {{configs$['segment.bytes']}}
-                  </div>
-                </div>
-              </li>
-              <li class="list-group-item">
-                  <div class="row">
-                    <div class="col">
-                      retention.bytes
-                    </div>
-                    <div class="col">
-                      {{configs$['retention.bytes']}}
-                    </div>
-                  </div>
-                </li>
-                <li class="list-group-item">
-                    <div class="row">
-                      <div class="col">
-                        retention.ms
-                      </div>
-                      <div class="col">
-                        {{configs$['retention.ms']}}
-                      </div>
-                    </div>
-                  </li>
-                  <li class="list-group-item">
-                      <div class="row">
-                        <div class="col">
-                          cleanup.policy
-                        </div>
-                        <div class="col">
-                          {{configs$['cleanup.policy']}}
-                        </div>
-                      </div>
-                    </li>
-        </ul>
-        <div class="panel-footer">
-          <a class="btn btn-primary" href="#">topics</a>
+        <div class="statistic d-flex align-items-center bg-white has-shadow">
+          <div class="icon bg-red">
+            <i class="fa fa-tasks"></i>
+          </div>
+          <div class="text">
+            <strong></strong>
+            <br>
+            <small>configs</small>
+          </div>
         </div>
       </div>
+
+
+      <div class="chart col-lg-5 col-12">
+        <div class="bg-white d-flex align-items-center justify-content-center has-shadow">
+          <!-- Page Header-->
+          <div class="container">
+            <!--insert topic lists here-->
+            <div class="card-body">
+
+                <div class="table-responsive">             
+                  <table class="table table-striped table-hover">
+                    <thead>
+                      <tr>
+                        <th>entry</th>
+                        <th>value</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>partitions</td>
+                        <td> {{configs$.partitions}}</td>
+                      </tr>
+                      <tr>
+                        <td>replicas</td>
+                        <td>{{configs$.replicas}}</td>
+                      </tr>
+                      <tr>
+                        <td>segment.bytes</td>
+                        <td> {{configs$['segment.bytes']}}</td>
+                      </tr>
+                      <tr>
+                        <td>retention.bytes</td>
+                        <td> {{configs$['retention.bytes']}}</td>
+                      </tr>
+                      <tr>
+                        <td> retention.ms</td>
+                        <td> {{configs$['retention.ms']}}</td>
+                      </tr>
+                      <tr>
+                        <td>cleanup.policy</td>
+                        <td> {{configs$['cleanup.policy']}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+          </div>
+          <!--end of container for the list of acls-->
+        </div>
+      </div>
+      <div class="chart col-lg-3 col-12">
+        <!-- Bar Chart   -->
+      </div>
     </div>
-    <!-- /item -->
-  </section>
-</div>
+  </div>
+</section>

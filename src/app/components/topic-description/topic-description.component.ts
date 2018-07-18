@@ -15,6 +15,8 @@ declare var $: any;
 export class TopicDescriptionComponent implements OnInit {
   topic$: Object;
   description$: Object;
+ 
+
   
   constructor( private data : DataService, private route: ActivatedRoute) {
     this.route.params.subscribe( params => this.topic$ = params.topic )
@@ -25,13 +27,4 @@ export class TopicDescriptionComponent implements OnInit {
       data => this.description$ = data 
     );
   }
-    
-    print() {
-    for(var prop in this.description$) {
-      console.log( prop + this.description$[prop]);
-    }
-   console.log(this.description$);
-  }
-  
-
 }

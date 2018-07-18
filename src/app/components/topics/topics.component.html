@@ -10,22 +10,21 @@
     <div class="row">
       <!-- Statistics -->
       <div class="statistics col-lg-3 col-12">
+          <div class="statistic d-flex align-items-center bg-white has-shadow">
+              <div class="icon bg-orange"><i class="fa fa-upload bg-orange"></i></div>
+              <div class="text"><strong>dev</strong><br></div>
+            </div>
+
         <div class="statistic d-flex align-items-center bg-white has-shadow">
-          <div class="icon bg-red"><i class="fa fa-tasks"></i></div>
+          <div class="icon bg-green"><i class="fa fa-tasks"></i></div>
           <div class="text"><strong>{{topics$.length}}</strong><br><small>Topics</small></div>
         </div>
-        <div class="statistic d-flex align-items-center bg-white has-shadow">
-          <div class="icon bg-green"><i class="fa fa-calendar-o"></i></div>
-          <div class="text"><strong>00</strong><br><small>Acls</small></div>
-        </div>
-        <div class="statistic d-flex align-items-center bg-white has-shadow">
-          <div class="icon bg-orange"><i class="fa fa-paper-plane-o"></i></div>
-          <div class="text"><strong>00</strong><br><small>Configs</small></div>
-        </div>
+  
+        
       </div>
   
   
-      <div class="chart col-lg-6 col-12">
+      <div class="chart col-lg-8 col-12">
         <div class="bg-white d-flex align-items-center justify-content-center has-shadow">
            <!-- Page Header-->
            
@@ -43,31 +42,6 @@
               </form>
             </div>
      
-          <!--
-          <ul>
-            <div class="row">
-      
-              <li class="list-group-item col-10 align-items-center"  *ngFor='let topic of topics$ | filter:term'> {{topic }} 
-                <ul> 
-                  <li (click)="toggleHide()">     
-                 <div class="row" [hidden]="getHide()" >
-                  <a routerLink="description/{{topic}}">
-                    <i class="material-icons md-light md-active col-1">description</i>
-                  </a>
-                  <a routerLink="configs/{{topic}}">
-                    <i class="material-icons md-light md-inactive col-1">settings</i>
-                  </a>
-                  <a routerLink="acls/{{topic}}">
-                    <i class="material-icons md-light md-inactive col-1">supervised_user_circle</i>
-                  </a>
-                </div>
-              </li> 
-              </ul> 
-              </li>
-            </div>
-          </ul>
-          -->
-
           <div class="card-body">
             <div class="table-responsive">                       
               <table class="table table-hover">
@@ -78,13 +52,13 @@
                     <td>
                         <div class="row" [hidden]="getHide()" >
                             <a routerLink="description/{{topic}}">
-                              <i class="material-icons md-light md-active col-1">description</i>
+                              <i class="material-icons sm-light md-active col-1">description</i>
                             </a>
                             <a routerLink="configs/{{topic}}">
-                              <i class="material-icons md-light md-inactive col-1">settings</i>
+                              <i class="material-icons sm-light md-inactive col-1">settings</i>
                             </a>
                             <a routerLink="acls/{{topic}}">
-                              <i class="material-icons md-light md-inactive col-1">supervised_user_circle</i>
+                              <i class="material-icons sm-light md-inactive col-1">supervised_user_circle</i>
                             </a>
                           </div>
                   </td>
