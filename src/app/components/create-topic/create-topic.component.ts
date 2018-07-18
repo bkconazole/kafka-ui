@@ -43,7 +43,8 @@ export class CreateTopicComponent implements OnInit {
     let me = this;
     reader.onload = function () {
       me.fileText = reader.result;
-      console.log(me.fileText);
+
+      console.log('file text in crate topic'+me.fileText);
     }
   }
 

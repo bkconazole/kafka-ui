@@ -13,6 +13,7 @@ import { UpdateTopicComponent } from './components/update-topic/update-topic.com
 import { DeleteTopicComponent } from './components/delete-topic/delete-topic.component';
 import { GrantAclsComponent } from './components/grant-acls/grant-acls.component';
 import { RevokeAclsComponent } from './components/revoke-acls/revoke-acls.component';
+import { DeleteTopicNoFileComponent } from './components/delete-topic-no-file/delete-topic-no-file.component';
 
 const routes: Routes = [
   {
@@ -51,6 +52,10 @@ const routes: Routes = [
   {
     path : 'topics/acls/:topic',
     component : TopicAclsComponent
+  },
+  {
+    path: 'topics/delete/:topic',
+    component: DeleteTopicNoFileComponent
   },
   {
     path : 'forms',

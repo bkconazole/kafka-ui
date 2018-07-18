@@ -51,6 +51,11 @@ export class DataService {
     return this.http.delete( url, httpOptions);
   }
 
+  delete( topic ) {
+    const url = this.apiUrl +'/'+topic+'/';
+    return this.http.delete( url );
+  }
+
   grantAcls (fileText) {
     const url = this.apiUrl + '/grant';
     return this.http.put(url, fileText, httpOptions )

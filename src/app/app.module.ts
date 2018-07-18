@@ -23,6 +23,7 @@ import { DeleteTopicComponent } from './components/delete-topic/delete-topic.com
 import { GrantAclsComponent } from './components/grant-acls/grant-acls.component';
 import { RevokeAclsComponent } from './components/revoke-acls/revoke-acls.component';
 import { KeyValuesPipe } from './key-values.pipe';
+import { DeleteTopicNoFileComponent } from './components/delete-topic-no-file/delete-topic-no-file.component';
 
 
 
@@ -45,7 +46,8 @@ import { KeyValuesPipe } from './key-values.pipe';
     DeleteTopicComponent,
     GrantAclsComponent,
     RevokeAclsComponent,
-    KeyValuesPipe
+    KeyValuesPipe,
+    DeleteTopicNoFileComponent
   ],
   imports: [
     BrowserModule,
