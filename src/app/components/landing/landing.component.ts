@@ -51,6 +51,7 @@ export class LandingComponent implements OnInit {
       // ------------------------------------------------------- //
       // Sidebar Functionality
       // ------------------------------------------------------ //
+      
       $('#toggle-btn').on('click', function (e) {
           e.preventDefault();
           $(this).toggleClass('active');
@@ -73,7 +74,7 @@ export class LandingComponent implements OnInit {
               $('.navbar-header .brand-small').show();
           }
       });
-  
+      
       // ------------------------------------------------------- //
       // Universal Form Validation
       // ------------------------------------------------------ //

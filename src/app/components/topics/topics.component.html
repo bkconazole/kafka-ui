@@ -32,12 +32,27 @@
           <div class="container">
           <!--insert topic lists here-->
         
+          <div class="col-md-9 bg-white">
+            <div class="form d-flex align-items-center">
+              <div class="content">
+                <form method="post" class="form-validate" autocomplete="off">
+                  <div class="form-group">
+                    <input id="login-username" type="text" name="loginUsername" required data-msg="please enter your username" class="input-material">
+                    <label for="login-username" class="label-material">user name</label>
+                  </div>
+                  
+                </form>
+              </div>
+            </div>
+          </div>
+
 
           <div class="content">
+            
           <form method="post" class="form-validate" autocomplete="off">
               <div class="form-group">
                 <input id="login-username" type="text" name="filter" [(ngModel)]="term" class="input-material">
-                <label class="label-material">filter</label>
+                <label for="login-username" class="label-material">filter</label>
               </div>
               </form>
             </div>

@@ -3,7 +3,7 @@
 
     <header class="page-header">
       <div class="container-fluid">
-        <h2 class="no-margin-bottom">ACLs</h2>
+        <h2 class="no-margin-bottom">acls</h2>
       </div>
     </header>
 
@@ -43,14 +43,12 @@
                         <thead>
                           <tr>
                             <th>principal</th>
-                            <th>permission</th>
                             <th>operation</th>
                           </tr>
                         </thead>
                         <tbody *ngFor='let acl of acls$'>
                           <tr>
                             <td>{{acl.principal}}</td>
-                            <td>{{acl.permission}}</td>
                             <td>{{acl.operation}}</td>
                           </tr>
                         </tbody>
