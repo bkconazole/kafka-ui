@@ -16,63 +16,28 @@ import { RevokeAclsComponent } from './components/revoke-acls/revoke-acls.compon
 import { DeleteTopicNoFileComponent } from './components/delete-topic-no-file/delete-topic-no-file.component';
 
 const routes: Routes = [
-  {
-    path :'',
-    component: TopicsComponent
+  { path: '', component: LoginComponent },
+  { path: 'home', component: LandingComponent,
+    children: [ 
+      { path: '', component: TopicsComponent },
+      { path: 'topic/create', component: CreateTopicComponent },
+      { path: 'file', component: FileUploadComponent },
+      { path: 'topic/update', component: UpdateTopicComponent },
+      { path: 'topic/delete', component: DeleteTopicComponent },
+      { path: 'topics/description/:topic', component: TopicDescriptionComponent },
+      { path: 'topics/configs/:topic', component: TopicConfigsComponent },
+      { path: 'topics/acls/:topic', component: TopicAclsComponent },
+      { path: 'topics/delete/:topic', component: DeleteTopicNoFileComponent },
+      { path: 'forms', component: CreateTopicFormComponent },
+      { path: 'login', component: LoginComponent },
+      { path: 'acls/grant', component: GrantAclsComponent },
+      { path: 'acls/revoke', component: RevokeAclsComponent }
+      
+    ]
   },
+  //{ path: 'topics', component: TopicsComponent },
+  //{ path: 'topic/create', component: CreateTopicComponent },
   
-  {
-    path : 'topics',
-    component : TopicsComponent
-  },
-  {
-    path: 'topic/create',
-    component: CreateTopicComponent
-  },
-  {
-    path: 'file',
-    component: FileUploadComponent
-  },
-  {
-    path: 'topic/update',
-    component: UpdateTopicComponent
-  },
-  {
-    path: 'topic/delete',
-    component: DeleteTopicComponent
-  },
-  {
-    path : 'topics/description/:topic',
-    component : TopicDescriptionComponent
-  },
-  {
-    path : 'topics/configs/:topic',
-    component : TopicConfigsComponent
-  },
-  {
-    path : 'topics/acls/:topic',
-    component : TopicAclsComponent
-  },
-  {
-    path: 'topics/delete/:topic',
-    component: DeleteTopicNoFileComponent
-  },
-  {
-    path : 'forms',
-    component: CreateTopicFormComponent 
-  },
-  {
-    path: 'login',
-    component: LoginComponent
-  },
-  {
-    path: 'acls/grant',
-    component: GrantAclsComponent
-  },
-  {
-    path: 'acls/revoke',
-    component: RevokeAclsComponent
-  }
 ];
 
 @NgModule({

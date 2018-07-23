@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
+import { ActivatedRoute, Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-landing',
@@ -9,8 +10,31 @@ import * as $ from 'jquery';
 export class LandingComponent implements OnInit {
 
   kafkaLogo: any = "../../../assets/img/kafka_logo.png";
-  constructor() { }
+  constructor( private activatedRoute: ActivatedRoute, private router: Router) { }
 
+  goHome(){
+    this.router.navigate(['topics'])
+  }
+  goCreateTopic() {
+    this.router.navigate(['home/topic/create'])
+  }
+  goUpdateTopic() {
+    this.router.navigate(['home/topic/update'])
+  }
+
+  goDeleteTopic() {
+    this.router.navigate(['home/topic/delete'])
+  }
+
+  goGrantAcl() {
+    this.router.navigate(['home/acls/grant'])
+  }
+  goRevokeAcl() {
+    this.router.navigate(['home/acls/revoke'])
+  }
+  goLogin() {
+
+  }
   ngOnInit() {
 
     $(document).ready(function () {

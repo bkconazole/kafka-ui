@@ -170,8 +170,8 @@
       <ul class="list-unstyled">
 
 
-        <li>
-          <a routerLink="topics">
+        <li id="route" (click)="goHome()">
+          <a >
             <i class="material-icons">
               home
               </i>Home </a>
@@ -182,22 +182,22 @@
               build
             </i>Manage Topics </a>
           <ul id="manageTopicsDropDown" class="collapse list-unstyled ">
-            <li>
-              <a routerLink="topic/create">
+            <li id="route" (click)="goCreateTopic()">
+              <a>
                 <i class="material-icons">
                   add_box
                   </i>
                 Create</a>
             </li>
-            <li>
-              <a routerLink="topic/update">
+            <li id="route" (click)="goUpdateTopic()">
+              <a >
                 <i class="material-icons">
                   create
                 </i>
                 Update</a>
             </li>
-            <li>
-              <a routerLink="topic/delete">
+            <li id="route" (click)="goDeleteTopic()">
+              <a>
                 <i class="material-icons">
                   delete
                 </i>Delete</a>
@@ -211,14 +211,14 @@
               build
             </i>Manage ACLs </a>
           <ul id="manageAclsDropdown" class="collapse list-unstyled ">
-            <li>
-              <a routerLink="acls/grant">
+            <li id="route" (click)="goGrantAcl()">
+              <a>
                 <i class="material-icons">
                   create
                 </i>Grant</a>
             </li>
-            <li>
-              <a routerLink="acls/revoke">
+            <li id="route" (click)="goRevokeAcl()">
+              <a>
                 <i class="material-icons">
                   delete
                 </i>Revoke</a>
@@ -234,12 +234,6 @@
     </nav>
 
     <div class="content-inner">
-
-
-
-
-
-
       <!--router outlet-->
       <router-outlet></router-outlet>
     
